@@ -20,5 +20,12 @@ namespace Helpers
                 new Car { Make = "Toyota", Model = "Yaris", Year = 2018, Price = 65000, Color = "Orange", VIN = "1234567899" }
             };
         }
+        public static void PrintCars(IEnumerable<Car> cars)
+        {
+            foreach (var car in cars)
+            {
+                Console.WriteLine($"{car.Make} {car.Model} {car.Price}");
+            }
+        }
     }
 }
