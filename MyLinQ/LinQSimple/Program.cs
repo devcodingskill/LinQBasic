@@ -6,8 +6,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        LinQForCar();
+       // LinQForCar();
         //LinQForEmployee();
+        GetMyNumber();
     }
 
     private static void LinQForCar()
@@ -93,5 +94,10 @@ internal class Program
         var query30 = employees.Last();
         var query31 = employees.LastOrDefault();
         var query32 = employees.Single(e => e.Department.ShortName == "HR");
+    }
+    private static void GetMyNumber()
+    {
+        int myNumber = 100;
+        myNumber.MyMultiply(x => x > 10); // Providing a lambda function as the required parameter
     }
 }
